@@ -41,6 +41,17 @@ The application leverages the power of **React** to maintain a modular, responsi
 - **JavaScript (ES6+)**
 - **CSS** 
 
+🎲 Dice roll animation
+
+dice animation.mp4
+
+🧩 Ludo board layout
+
+
+✅ Winning screen
+
+
+
 
 ---
 

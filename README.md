@@ -75,33 +75,7 @@ npm install
 Run the Application
 npm run dev
 
-🗂 Project Structure
 
-Ludo By GROUP VI STUDIOS
-|
-node_modules
-|
-public/
-|
-├──vite.svg
-src/
-│
-├── Assets/        # Game pieces, dice, board, player controls
-│   ├── Board.js
-│   ├── Dice.js
-│   ├── Token.js
-│   └── PlayerPanel.js
-│
-├── pages/             # Views for different routes/pages
-│   └── HomePage.js
-│   └── GamePage.js
-│
-├── context/           # Global game state
-│   └── GameContext.js
-│
-├── App.js             # Main app structure
-├── index.js           # Entry point
-└── styles/            # CSS/
 
 👥 Team Responsibilities
 Member	Responsibilities
@@ -109,9 +83,6 @@ Ramsey Anyona   	🎨 Figma board design, 🧠 Win logic, 💻 JSX board impleme
 Ernest Munyoki	  🎲 Dice component + animation, 🔁 Turn manager, 📍 Token capture logic
 Randy Wanyoike	  🔄 Game state logic (Context API),  📱 Responsive layout (Tailwind),🖱 Clickable token logic
 Beryl Moseti	    🎭 Token design, 🚀 Token movement, 🔊 Sound effect integration
-
-
-
 
 
 

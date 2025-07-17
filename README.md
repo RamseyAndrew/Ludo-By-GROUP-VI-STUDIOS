@@ -44,12 +44,18 @@ The application leverages the power of **React** to maintain a modular, responsi
 🎲 Dice roll animation
 
 
+https://github.com/user-attachments/assets/cebffe6c-749a-4440-80c9-bde13fb0b038
+
+
 
 🧩 Ludo board layout
+
+<img width="769" height="781" alt="Screenshot 2025-07-17 170841" src="https://github.com/user-attachments/assets/507a3813-1dac-402b-a98e-dc7dfc8b3f45" />
 
 
 ✅ Winning screen
 
+![a ludo winning screen with the text, congratulations  you won ___](https://github.com/user-attachments/assets/cb5cbd98-446c-4eb9-8390-b9df943103e6)
 
 
 

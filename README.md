@@ -43,7 +43,7 @@ The application leverages the power of **React** to maintain a modular, responsi
 
 🎲 Dice roll animation
 
-dice animation.mp4
+
 
 🧩 Ludo board layout
 

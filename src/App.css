@@ -1,0 +1,36 @@
+.App{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+}
+
+.dice{
+    font-size: 100px;
+    width: 120px;
+    height:120px;
+    border: 5px solid #000;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out
+}
+
+.dice.rollin{
+    animation:spin 1s ease-in-out;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
+
+button{
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

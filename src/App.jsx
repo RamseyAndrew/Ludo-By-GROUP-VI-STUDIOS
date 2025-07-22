@@ -1,8 +1,11 @@
 import { useState } from "react"
 import "./css/App.css"
+import TurnManager from "./TurnManager"
+
 function App(){
     const [diceValue, setDiceValue] = useState(1)
     const [rolling, setRolling] = useState(false)
+    const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0)
 
     const rollDice = () => {
         if (rolling) return;
@@ -12,7 +15,12 @@ function App(){
         setTimeout(() => {
             setDiceValue(newValue)
             setRolling(false)
+            nextTurn()
         }, 300)
+    };
+
+    const nextTurn = () => {
+      setCurrentPlayerIndex((prevIndex) => (prevIndex + 1) % 4)
     }
 
      const getRotation = (value) => {
@@ -65,7 +73,6 @@ function App(){
           </div>
         </div>
       </div>
-            <div className={`dice${rolling ? "rolling":""}`}>{diceValue}</div>
             <button onClick={rollDice} disabled={rolling}>
                 {rolling ? "Rolling..." : "Roll Dice"}
             </button>

@@ -1,6 +1,5 @@
 import { useState } from "react"
-import "./App.css"
-
+import "./css/App.css"
 function App(){
     const [diceValue, setDiceValue] = useState(1)
     const [rolling, setRolling] = useState(false)

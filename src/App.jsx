@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./App.css"
 
 function App(){
     const [diceValue, setDiceValue] = useState(1)

@@ -13,11 +13,59 @@ function App(){
         setTimeout(() => {
             setDiceValue(newValue)
             setRolling(false)
-        }, 1000)
+        }, 300)
     }
+
+     const getRotation = (value) => {
+    switch (value) {
+      case 1: return "rotateX(0deg) rotateY(0deg)"
+      case 2: return "rotateX(-180deg) rotateY(0deg)"
+      case 3: return "rotateY(-90deg)"
+      case 4: return "rotateY(90deg)"
+      case 5: return "rotateX(-90deg)"
+      case 6: return "rotateX(90deg)"
+      default: return ""
+    }
+  }
 
     return(
         <div className="App">
+            <h1>Click to roll the dice</h1>
+             <div className="container" onClick={rollDice}>
+        <div id="cube" style={{ transform: getRotation(diceValue) }}>
+          <div className="front"><span className="dot dot1" /></div>
+          <div className="back">
+            <span className="dot dot1" />
+            <span className="dot dot2" />
+          </div>
+          <div className="right">
+            <span className="dot dot1" />
+            <span className="dot dot2" />
+            <span className="dot dot3" />
+          </div>
+          <div className="left">
+            <span className="dot dot1" />
+            <span className="dot dot2" />
+            <span className="dot dot3" />
+            <span className="dot dot4" />
+          </div>
+          <div className="top">
+            <span className="dot dot1" />
+            <span className="dot dot2" />
+            <span className="dot dot3" />
+            <span className="dot dot4" />
+            <span className="dot dot5" />
+          </div>
+          <div className="bottom">
+            <span className="dot dot1" />
+            <span className="dot dot2" />
+            <span className="dot dot3" />
+            <span className="dot dot4" />
+            <span className="dot dot5" />
+            <span className="dot dot6" />
+          </div>
+        </div>
+      </div>
             <div className={`dice${rolling ? "rolling":""}`}>{diceValue}</div>
             <button onClick={rollDice} disabled={rolling}>
                 {rolling ? "Rolling..." : "Roll Dice"}

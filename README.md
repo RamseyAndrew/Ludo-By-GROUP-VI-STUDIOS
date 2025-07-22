@@ -79,10 +79,10 @@ npm run dev
 
 👥 Team Responsibilities
 Member	Responsibilities
-Ramsey Anyona   	🎨 Figma board design, 🧠 Win logic, 💻 JSX board implementation
-Ernest Munyoki	  🎲 Dice component + animation, 🔁 Turn manager, 📍 Token capture logic
-Randy Wanyoike	  🔄 Game state logic (Context API),  📱 Responsive layout (Tailwind),🖱 Clickable token logic
-Beryl Moseti	    🎭 Token design, 🚀 Token movement, 🔊 Sound effect integration
+Ramsey Anyona   	          🎨 Figma board design, 🧠 Win logic, 💻 JSX board implementation
+Ernest Munyoki	            🎲 Dice component + animation, 🔁 Turn manager, 📍 Token capture logic
+Randy Wanyoike	            🔄 Game state logic (Context API),  📱 Responsive layout (Tailwind),🖱 Clickable token logic
+Beryl Moseti/Derrick Wilson	 🎭 Token design, 🚀 Token movement, 🔊 Sound effect integration
 
 
 

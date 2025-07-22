@@ -1,4 +1,6 @@
 import React from "react";
+import "./css/TurnManager.css"
+
 const players = ["Red", "Blue", "Green", "Yellow"];
 const playerColors = {
     Red: "red",

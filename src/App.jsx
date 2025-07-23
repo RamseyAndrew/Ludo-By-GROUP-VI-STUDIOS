@@ -1,11 +1,16 @@
 import { useState } from "react"
 import "./css/App.css"
 import TurnManager from "./TurnManager"
+import captureLogic from "./TokenCapture"
+import useCaptureLogic from "./TokenCapture"
+
+const players = ["Red", "Blue", "Green", "Yellow"]
 
 function App(){
     const [diceValue, setDiceValue] = useState(1)
     const [rolling, setRolling] = useState(false)
     const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0)
+    const {moveToken, positions} = useCaptureLogic()
 
     const rollDice = () => {
         if (rolling) return;
@@ -14,9 +19,10 @@ function App(){
         const newValue = Math.floor(Math.random()*6 + 1)
         setTimeout(() => {
             setDiceValue(newValue)
+            const currentPlayer = players[currentPlayerIndex];
             setRolling(false)
-            onNextTurn()
-            moveToken(players[currentPlayerIndex], newValue)
+            nextTurn()
+            moveToken(currentPlayer, newValue)
         }, 300)
     };
 

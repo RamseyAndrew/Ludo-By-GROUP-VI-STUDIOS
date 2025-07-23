@@ -1,15 +1,13 @@
 import { useState } from "react"
 
-const safeZones = [1, 9, 14, 22, 27, 35, 40, 48];
-
-const initialPositions = {
+function useCaptureLogic(){
+    const safeZones = [1, 9, 14, 22, 27, 35, 40, 48];
+    const [positions, setPositions] = useState({
     Red: 0,
     Blue: 0,
     Green: 0,
     Yellow: 0,
-}
-    function captureLogic(){
-    const [positions, setPositions] = useState(initialPositions)
+    });
     const moveToken = (player, diceValue) => {
         setPositions((prev) => {
             const newPosition = prev[player] + diceValue;
@@ -33,4 +31,4 @@ const initialPositions = {
     return {positions, moveToken}
 }
 
-export default captureLogic
+export default useCaptureLogic

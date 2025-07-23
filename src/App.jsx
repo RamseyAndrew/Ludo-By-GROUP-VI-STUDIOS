@@ -16,6 +16,7 @@ function App(){
             setDiceValue(newValue)
             setRolling(false)
             onNextTurn()
+            moveToken(players[currentPlayerIndex], newValue)
         }, 300)
     };
 

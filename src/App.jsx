@@ -15,7 +15,7 @@ function App(){
         setTimeout(() => {
             setDiceValue(newValue)
             setRolling(false)
-            nextTurn()
+            onNextTurn()
         }, 300)
     };
 

@@ -1,0 +1,46 @@
+.ludo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+.board {
+  position: relative;
+  width: 90vw;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border: 2px solid #333;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+.token {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #222;
+  transition: box-shadow 0.2s;
+}
+.token.red { background: #e74c3c; }
+.token.green { background: #27ae60; }
+.token.yellow { background: #f1c40f; }
+.token.blue { background: #2980b9; }
+.token:hover { box-shadow: 0 0 10px #333; }
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .board { width: 98vw; }
+}

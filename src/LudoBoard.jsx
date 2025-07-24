@@ -1,5 +1,4 @@
 import React from "react";
-import "./LudoBoard.css"; // Assuming you have styles for the board and tokens
 import { useLudoGame } from "./GameState";
 
 export default function LudoBoard() {
@@ -15,7 +14,7 @@ export default function LudoBoard() {
               key={player + idx}
               className={`token ${player}`}
               style={{
-                // ...existing code for positioning based on token.position...
+                
                 left: `${10 + ((token.position ?? -2) * 2)}%`,
                 top: `${10 + ((token.position ?? -2) * 2)}%`,
               }}

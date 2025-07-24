@@ -1,7 +1,7 @@
 // src/Board.jsx
 import React from 'react';
-import './Board.css';
 import Token from './Token';
+import './Board.css'
 
 const Board = () => {
   const cells = [];

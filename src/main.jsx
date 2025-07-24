@@ -1,13 +1,12 @@
 // src/main.jsx
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import './Board.css';
-import './Token.css';
-import './Dice.css'
+import Token from './Token';
+import Board from './Board';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 <StrictMode>
-  <App/>
+  <Board/>
   </StrictMode>
 );

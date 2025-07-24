@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Board from './Board'
+// src/main.jsx
+import React, { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './Board.css';
+import './Token.css';
+import './Dice.css'
 
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Board/>
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root')).render(
+<StrictMode>
+  <App/>
+  </StrictMode>
+);

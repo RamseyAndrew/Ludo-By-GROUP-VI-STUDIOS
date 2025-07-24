@@ -1,59 +1,49 @@
 // src/Board.jsx
 import React from 'react';
-import boardImg from './assets/board.png';
+import './Board.css';
 import Token from './Token';
 
-const tokens = [
-  // Blue (top-left)
-  { x: 152, y: 160, color: 'blue' }, 
-  { x: 235, y: 160, color: 'blue' }, 
-  { x: 152, y: 239, color: 'blue' }, 
-  { x: 235, y: 240, color: 'blue' },  
+const Board = () => {
+  const cells = [];
 
-  // Red (top-right)
-  { x: 523, y: 158, color: 'red' }, 
-  { x: 603.5, y: 160, color: 'red' }, 
-  { x: 523, y: 239.6, color: 'red' }, 
-  { x: 603.5, y: 240, color: 'red' }, 
+  for (let row = 0; row < 15; row++) {
+    for (let col = 0; col < 15; col++) {
+      const key = `${row}-${col}`;
+      cells.push(<div key={key} className={`cell r${row} c${col}`} />);
+    }
+  }
 
-  // Yellow (bottom-left)
-  { x: 153, y: 524, color: 'gold' }, 
-  { x: 237, y: 525.1, color: 'gold'}, 
-  { x: 154, y: 606.6, color: 'gold' }, 
-  { x: 237.4, y: 604, color: 'gold' }, 
+  return (
+    <div className="board-wrapper">
+      <div className="board">
+        {cells}
+      </div>
 
-  // Green (bottom-right)
-  { x: 521.5, y: 525, color: 'green' }, 
-  { x: 606.5, y: 525, color: 'green' }, // done
-  { x: 521.5, y: 605, color: 'green' }, 
-  { x: 606.5, y: 604, color: 'green' }, // done
-];
+     {/* {these are the blue tokens} */}
+      <Token row={1.5} col={1.5} color="#4285f4" />
+      <Token row={1.5} col={3.5} color="#4285f4" />
+      <Token row={3.5} col={1.5} color="#4285f4" />
+      <Token row={3.5} col={3.5} color="#4285f4" />
+      
+      {/* {these are the yellow tokens} */}
+      <Token row={10.5} col={1.5} color="gold" />  
+      <Token row={10.5} col={3.5} color="gold" />  
+      <Token row={12.5} col={1.5} color="gold" />  
+      <Token row={12.5} col={3.5} color="gold" />  
 
-const Board = () => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      minHeight: '100vh',
-    }}
-  >
-    <div style={{ position: 'relative', width: 800, height: 800 }}>
-      <img
-        src={boardImg}
-        alt="Ludo Board"
-        style={{
-          width: '100%',
-          height: '100%',
-          borderRadius: '12px',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.2)',
-        }}
-      />
-      {tokens.map((token, index) => (
-        <Token key={index} {...token} />
-      ))}
+      {/* {these are the red tokens} */}
+      <Token row={1.5} col={10.5} color="#ea4335" /> 
+      <Token row={1.5} col={12.5} color="#ea4335" /> 
+      <Token row={3.5} col={10.5} color="#ea4335" /> 
+      <Token row={3.5} col={12.5} color="#ea4335" /> 
+
+      {/* {these are the green tokens} */}
+      <Token row={10.5} col={10.5} color="#34a853" />
+      <Token row={10.5} col={12.5} color="#34a853" />
+      <Token row={12.5} col={12.5} color="#34a853" />
+      <Token row={12.5} col={10.5} color="#34a853" />
     </div>
-  </div>
-);
+  );
+};
 
 export default Board;

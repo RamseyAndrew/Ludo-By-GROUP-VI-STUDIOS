@@ -16,6 +16,10 @@ function App(){
         if (rolling) return;
         setRolling(true)
 
+        if (newValue !== 6){
+          nextTurn()
+        }
+
         const newValue = Math.floor(Math.random()*6 + 1)
         setTimeout(() => {
             setDiceValue(newValue)

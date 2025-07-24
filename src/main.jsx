@@ -4,9 +4,11 @@ import ReactDOM from 'react-dom/client';
 import './Board.css';
 import Token from './Token';
 import Board from './Board';
+import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 <StrictMode>
   <Board/>
+  <App/>
   </StrictMode>
 );

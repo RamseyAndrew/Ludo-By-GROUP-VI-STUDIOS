@@ -16,10 +16,6 @@ function App(){
         if (rolling) return;
         setRolling(true)
 
-        if (newValue !== 6){
-          nextTurn()
-        }
-
         const newValue = Math.floor(Math.random()*6 + 1)
         setTimeout(() => {
             setDiceValue(newValue)
@@ -27,7 +23,7 @@ function App(){
             setRolling(false)
             nextTurn()
             moveToken(currentPlayer, newValue)
-        }, 100)
+        }, 300)
     };
 
     const nextTurn = () => {

@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 function useCaptureLogic(){
-    const safeZones = [1, 9, 14, 22, 27, 35, 40, 48];
     const [positions, setPositions] = useState({
     Red: 0,
     Blue: 0,
@@ -18,13 +17,7 @@ function useCaptureLogic(){
 
             if (opponent){
                 const [opponentPlayer] = opponent;
-                if (!safeZones.includes(newPosition)) {
-                    updated[opponentPlayer] = 0;
-                    alert(`${player} captured ${opponentPlayer}'s token!`);
-                }else {
-                    console,log(`${opponentPlayer} is safe at position ${newPosition}`)
-                }
-            }
+              }
             return updated
         })
     }

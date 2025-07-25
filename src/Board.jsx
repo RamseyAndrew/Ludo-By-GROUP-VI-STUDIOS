@@ -1,4 +1,3 @@
-// src/Board.jsx
 import React from 'react';
 import Token from './Token';
 import './Board.css';
@@ -21,8 +20,7 @@ const Board = ({ positions, getTokenPosition, selectToken, selectedToken, curren
 
   const renderTokens = () => {
     const tokens = [];
-    
-    // Check if positions exists before trying to use it
+
     if (!positions) return tokens;
     
     Object.entries(positions).forEach(([player, playerTokens]) => {

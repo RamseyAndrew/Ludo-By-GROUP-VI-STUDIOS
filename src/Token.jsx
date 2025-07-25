@@ -1,4 +1,3 @@
-// src/Token.jsx
 import React from 'react';
 import './Token.css';
 

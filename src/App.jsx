@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState } from "react";
 import "./App.css";
 import Board from "./Board";
@@ -43,11 +42,11 @@ function App() {
     const currentPlayer = players[currentPlayerIndex];
     moveToken(currentPlayer, diceValue);
     
-    // Only move to next turn if dice wasn't 6
+    
     if (diceValue !== 6) {
       nextTurn();
     } else {
-      // Allow another roll if dice was 6
+      
       setDiceRolled(false);
     }
   };

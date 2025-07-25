@@ -1,7 +1,7 @@
 // src/TokenCapture.jsx
 import { useState } from "react";
 import { mainPath, playerStartIndex, victoryLanes, homePositions } from "./pathData";
-import moveSoundFile from "./Assets/move-sound.mp3"; // Import sound file
+import moveSoundFile from "./Assets/move-sound.mp3";
 
 function useCaptureLogic() {
   const [positions, setPositions] = useState({
@@ -18,10 +18,10 @@ function useCaptureLogic() {
     Yellow: 0,
   });
 
-  const [selectedToken, setSelectedToken] = useState(null); // { player, index }
+  const [selectedToken, setSelectedToken] = useState(null);
 
-  // Initialize sound
   const moveSound = new Audio(moveSoundFile);
+  moveSound.volume = 0.5;
 
   const selectToken = (player, index, diceValue) => {
     const currentPos = positions[player][index];
@@ -60,7 +60,6 @@ function useCaptureLogic() {
 
     if (!tokenToMove || tokenToMove.player !== player) return;
 
-    // 🔊 Play move sound
     moveSound.play().catch((error) => {
       console.error("Failed to play sound:", error);
     });

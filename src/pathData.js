@@ -1,5 +1,5 @@
 export const mainPath = [
-  { row: 6, col: 1 },
+  { row: 1, col: 1 },
   { row: 6, col: 2 },
   { row: 6, col: 3 },
   { row: 6, col: 4 },

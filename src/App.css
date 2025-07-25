@@ -1,0 +1,135 @@
+/* src/App.css */
+
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.game-controls {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.game-controls h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.game-controls h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.container {
+  margin: 20px 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#cube {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  margin: 0 auto;
+}
+
+#cube div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgb(0, 0, 0);
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.front { transform: rotateY(0deg) translateZ(30px); }
+.back { transform: rotateY(180deg) translateZ(30px); }
+.right { transform: rotateY(90deg) translateZ(30px); }
+.left { transform: rotateY(-90deg) translateZ(30px); }
+.top { transform: rotateX(90deg) translateZ(30px); }
+.bottom { transform: rotateX(-90deg) translateZ(30px); }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Dice dot positions */
+.front .dot1 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.back .dot1 { top: 25%; left: 25%; }
+.back .dot2 { bottom: 25%; right: 25%; }
+
+.right .dot1 { top: 25%; left: 50%; transform: translateX(-50%); }
+.right .dot2 { top: 50%; left: 50%; transform: translateX(-50%); }
+.right .dot3 { bottom: 25%; left: 50%; transform: translateX(-50%); }
+
+.left .dot1 { top: 25%; left: 25%; }
+.left .dot2 { top: 25%; right: 25%; }
+.left .dot3 { bottom: 25%; left: 25%; }
+.left .dot4 { bottom: 25%; right: 25%; }
+
+.top .dot1 { top: 20%; left: 20%; }
+.top .dot2 { top: 20%; right: 20%; }
+.top .dot3 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.top .dot4 { bottom: 20%; left: 20%; }
+.top .dot5 { bottom: 20%; right: 20%; }
+
+.bottom .dot1 { top: 15%; left: 15%; }
+.bottom .dot2 { top: 15%; right: 15%; }
+.bottom .dot3 { top: 15%; left: 50%; transform: translateX(-50%); }
+.bottom .dot4 { bottom: 15%; left: 15%; }
+.bottom .dot5 { bottom: 15%; right: 15%; }
+.bottom .dot6 { bottom: 15%; left: 50%; transform: translateX(-50%); }
+
+.button-controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+}
+
+.button-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.button-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.game-controls p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}

@@ -27,7 +27,7 @@ function App(){
             setRolling(false)
             nextTurn()
             moveToken(currentPlayer, newValue)
-        }, 300)
+        }, 100)
     };
 
     const nextTurn = () => {
